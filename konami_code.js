@@ -7,5 +7,18 @@ mocha.addEventListener('keydown', e => console.log(e.which))
 
 function init() {
   // Write your JavaScript code inside the init() function
-  
+  const key = parseInt(e.detail || e.which);
+ 
+  if (key === alphabet[index]) {
+    index++;
+ 
+    if (index === alphabet.length) {
+      alert("Hurray!");
+ 
+      index = 0;
+    }
+  } else {
+    index = 0;
+  }
+}
 }
